@@ -1,26 +1,25 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 2.1  Design tokens — Tailwind reads these */
+@theme {
+  /* palette (oklch values give vivid, P3-ready color) */
+  --color-bg:        oklch(0.97 0 0);          /* ≈ #f7fafc */
+  --color-text:      oklch(0.22 0.02 260);     /* ≈ #1a202c */
+  --color-accent-500: oklch(0.78 0.15 95);     /* warm gold */
+
+  /* typography */
+  --font-sans: 'Inter', ui-sans-serif, system-ui;
+
+  /* new breakpoint — 3xl utilities like `3xl:grid-cols-6` */
+  --breakpoint-3xl: 120rem;                    /* 1920 px */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* 2.2  A few global base tweaks */
+@layer base {
+  html,body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  a { color: var(--color-accent-500); text-decoration: underline; }
 }
