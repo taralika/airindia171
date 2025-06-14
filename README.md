@@ -1,3 +1,11 @@
+# Setup instructions
+
+1. Make sure you have Node.js 18.18.2 and pnpm 8.15.4
+2. Run `nvm use` (auto picks up from .nvmrc)
+3. Run `pnpm install`
+4. Start dev server: `pnpm dev`
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
