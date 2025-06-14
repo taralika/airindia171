@@ -6,7 +6,7 @@ export default function Home() {
         Air India 171 Memorial
       </h1>
       <p className="max-w-xl text-lg md:text-xl mb-8">
-        A shared space to remember and honor everyone lost on Flight 171.
+        A shared space to remember and honor everyone lost with Flight 171.
       </p>
       <Link
         href="/passengers"
